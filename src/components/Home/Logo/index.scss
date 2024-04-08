@@ -1,0 +1,53 @@
+// .logo-container {
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   width: 50%; /* Adjust width as needed */
+//   height: 100vh;
+//   overflow: hidden;
+// }
+
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#motionPath {
+  overflow: visible;
+  height: 100%;
+  max-width: 100%;
+}
+
+#motionPath path {
+  stroke-width: 2;
+  stroke: gray;
+}
+
+#motionPath .astronaut {
+  visibility: hidden;
+}
+@keyframes moveRightToLeft {
+  from {
+    right: -100px; /* Start position */
+  }
+  to {
+    right: calc(-50px); /* End position */
+  }
+}
+
+.my-image {
+  width: 30vw; /* Adjust the initial width based on viewport width */
+  position: absolute;
+  top: 50%; /* Position the image vertically in the middle */
+  right: -50px; /* Initial position */
+  transform: translateY(-50%); /* Center the image vertically */
+  z-index: -1;
+  box-shadow: -11px 11px 35px rgba(3, 191, 255, 0.7);
+  border-radius: 10px; /* Adjust the value as needed */
+  animation: moveRightToLeft 5s linear forwards; /* Adjust duration and timing function as needed */
+}
